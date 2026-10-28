@@ -77,3 +77,33 @@ function reverse(string){
 
 console.log(reverse("Vishnu"))
 
+let abcd = function(x,v){
+    return x+v
+}
+
+console.log(abcd(1,3))
+
+let user_details={
+    uname:"Vishnu",
+    age:25,
+    work: "QA Engineer",
+    work_mode: "Remote",
+    basic:function (){
+       return this.uname+ " is "+this.work + " he worked in "+ this.work_mode + " job"
+    }
+}
+
+console.log(user_details.basic())
+
+const counter={
+    count:0,
+increment(){
+    this.count ++;
+},
+incrementArrow(){
+    this.count ++;
+}}
+
+counter.incrementArrow()
+// counter.increment()
+console.log(counter.count)
