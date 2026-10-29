@@ -107,3 +107,15 @@ incrementArrow(){
 counter.incrementArrow()
 // counter.increment()
 console.log(counter.count)
+
+function sum(arr){
+    let value=0
+    for (let i of arr){
+        if (i > 0){
+            value +=i
+        }
+    }
+    return value
+}
+let array=[4, 7, -3, 2, 6]
+console.log(sum(array))
