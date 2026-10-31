@@ -91,3 +91,26 @@ console.log("\nMother Details")
 for(let [key, value] of Object.entries(myMother)){
     console.log(key+ " : " +value)
 }
+//Constructor
+function User(val){
+    this.u_name = "Somu";
+    this.u_age = 45;
+    this.u_salary = 85977;
+    this.working= val
+}
+
+let user=new User(true);
+
+console.log(user)
+
+function Details(F_n,L_n){
+    this.firstname=F_n;
+    this.lastname=L_n;
+    this.Age= function(age){
+        return this.firstname+ " " +this.lastname + " "+age
+    }
+}
+
+let U_details= new Details("Shan","Face")
+
+console.log(U_details.Age(40))
