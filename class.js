@@ -62,3 +62,42 @@ bike.Brand="TVS"
 bike.Model_Name="Apache"
 bike.Year=2022
 console.log(bike.Brand, bike.Model_Name, bike.Year)
+
+// Inheritance
+
+class Laptop{
+    
+    constructor(Brand, RAM, Storage, SSD){
+        this.Brand=Brand
+        this.RAM=RAM
+        this.Storage=Storage
+        this.SSD=SSD
+    }
+    discribe(){
+        return "Brand: "+ this.Brand +", RAM: "+this.RAM+ ", Storage: " +this.Storage + ", SSD: " +this.SSD
+    }
+}
+
+class Game_Laptop extends Laptop{
+
+    constructor(Brand, RAM, Storage, SSD, Grafic, VRAM){
+        super(Brand,RAM,Storage,SSD);
+        this.Grafic=Grafic;
+        this.VRAM=VRAM;
+    }
+
+    get Grafic_card(){
+        return this.Grafic
+    }
+
+    set VRAM_Size(vram){
+        return this.VRAM=vram
+    }
+}
+
+let glap=new Game_Laptop('ASUS', 32, 512,true,'RT3050')
+glap.VRAM_Size=16
+console.log(glap)
+
+console.log(glap.Grafic_card)
+
